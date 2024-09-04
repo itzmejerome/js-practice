@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <button onclick="
+        console.log(`show cart: ${cart}`)">
+        show cart
+    </button>
+
+    <button onclick="
+        if(cart >= 10){
+            alert('cart is full!')
+        }else{
+            console.log(`cart: ${cart}`);
+            cart++;
+        }
+        
+    ">
+        add cart
+    </button>
+
+
+
+    <button onclick="
+    if(cart >= 10){
+        alert('cart is full');
+    }else{
+        console.log(`cart total: ${cart}`);
+        cart += 2;
+    }
+    "> add + 2
+
+    </button>
+
+    <script>
+        let cart = 0;
+    </script>
+</body>
+</html>
