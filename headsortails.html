@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Heads or Tails?
+    </p>
+
+    <button onclick="randomguess('tails');">Heads</button>
+    
+    <button onclick="randomguess('heads');">Tails</button>
+
+    <script>
+        function randomguess(playerPick)
+
+        {
+            const randomNumber = Math.random();
+
+            let result = '';
+            let guess = '';
+
+            if(playerPick === 'heads'){
+
+            if(randomNumber > 0.5){
+                result = 'tails';
+            }else{
+                result = 'heads';
+            }
+
+            if(result === 'tails'){
+                guess = 'You win!';
+            }else{
+                guess = 'You lose!';
+            } 
+        } else if(playerPick === 'tails'){
+            if(randomNumber <= 0.5){
+                result = 'heads';
+            }else{
+                result = 'tails';
+            }
+
+            let guess = '';
+
+            if(result === 'heads' ){
+                guess = 'You win';
+            }else {
+                guess = 'You lose';
+            }
+        }
+            alert(`You have picked ${playerPick} and the result is ${result}. ${guess}`);
+        }
+
+    </script>
+</body>
+</html>
