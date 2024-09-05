@@ -6,21 +6,47 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick=" greet();">Greet People</button>
-
+    
     <script>
+    function sayHello() {
+        console.log("Hello, world!");
+}
+    sayHello();
 
-        function greet(name){
-            if(name = !name){
-            console.log('Hello There');
-        }else{
-            console.log(`Hello ${name}`);
-        }
+    function addNumbers() {
+        let result = 2 + 3;
+        console.log(result);
     }
 
-        greet('Simon');
-        greet('Jerome');
-        greet();
+    addNumbers(); // Output: 5
+
+    function multiplyNumbers() {
+    let result = 4 * 5;
+    console.log(result);
+}
+
+    multiplyNumbers(); // Output: 20
+
+    function sayMyName(name) {
+    console.log("Hello, " + name + "!");
+}
+
+    sayMyName("John"); // Output: Hello, John!
+
+    function isPositive(number) {
+    if (number > 0) {
+        console.log("The number is positive.");
+    } else {
+        console.log("The number is not positive.");
+    }
+}
+
+    isPositive(5); // Output: The number is positive.
+    isPositive(-3); // Output: The number is not positive.
+
+
+
+
 
     </script>
 </body>
