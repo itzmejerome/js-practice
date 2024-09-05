@@ -6,24 +6,36 @@
     <title>Document</title>
 </head>
 <body>
-
     <button onclick="
-    updateCalculation('1');
-    "
+    updateCalculation('1');"
     >1</button>
+    <button
+    onclick="
+    updateCalculation('2');
+    ">2</button>
+    <button onclick="updateCalculation('+')">+</button>
+    <button onclick="
 
-    <button>2</button>
+    calculator = eval(calculator);
+    console.log(calculator);
 
-    <button>0</button>
+    ">=</button>
+
+    <button
+    onclick="
+    calculator = '';
+    console.log(calculator);
+    "
+    >reset calculator</button>
+
 
     <script>
-        let calculator = '';
-
+        let calculator = ''
         function updateCalculation(value){
-            updateCalculation += calculator;
+            calculator += value;
             console.log(calculator);
         }
+
     </script>
-    
 </body>
 </html>
